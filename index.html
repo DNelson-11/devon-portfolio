@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .animated-wave-text .wave-char {
+      display: inline-block;
+      animation: wave 2s infinite ease-in-out;
+    }
+    .animated-wave-text .wave-char:nth-child(2) { animation-delay: 0.05s; }
+    .animated-wave-text .wave-char:nth-child(3) { animation-delay: 0.1s; }
+    .animated-wave-text .wave-char:nth-child(4) { animation-delay: 0.15s; }
+    .animated-wave-text .wave-char:nth-child(5) { animation-delay: 0.2s; }
+    .animated-wave-text .wave-char:nth-child(6) { animation-delay: 0.25s; }
+    .animated-wave-text .wave-char:nth-child(7) { animation-delay: 0.3s; }
+    .animated-wave-text .wave-char:nth-child(8) { animation-delay: 0.35s; }
+    .animated-wave-text .wave-char:nth-child(9) { animation-delay: 0.4s; }
+    .animated-wave-text .wave-char:nth-child(10) { animation-delay: 0.45s; }
+    .animated-wave-text .wave-char:nth-child(11) { animation-delay: 0.5s; }
+    .animated-wave-text .wave-char:nth-child(12) { animation-delay: 0.55s; }
+    .animated-wave-text .wave-char:nth-child(13) { animation-delay: 0.6s; }
+    .animated-wave-text .wave-char:nth-child(14) { animation-delay: 0.65s; }
+
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .skill-circle {
+      background-color: #1f1f1f;
+      border: 2px solid #3b82f6;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+    }
+
+    #imagePopup img {
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+  </style>
+</head>
+<body class="font-sans text-white bg-black">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-black via-gray-900 to-purple-900 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <div></div>
+      <div class="space-x-6">
+        <a href="#about" class="text-white hover:text-purple-400">About Me</a>
+        <a href="#skills" class="text-white hover:text-purple-400">Skills</a>
+        <a href="#projects" class="text-white hover:text-purple-400">Projects</a>
+        <a href="#contact" class="text-white hover:text-purple-400">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero" class="relative h-screen bg-black flex items-center justify-center">
+  <div class="absolute inset-0 bg-gradient-to-br from-black to-purple-900 opacity-70"></div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 animated-wave-text">
+      <span class="wave-char">H</span><span class="wave-char">i</span><span class="wave-char">,</span>
+      <span class="wave-char">&nbsp;</span>
+      <span class="wave-char">I</span><span class="wave-char">&nbsp;</span>
+      <span class="wave-char">a</span><span class="wave-char">m</span><span class="wave-char">&nbsp;</span>
+      <span class="wave-char text-indigo-400">D</span><span class="wave-char text-indigo-400">e</span><span class="wave-char text-indigo-400">v</span><span class="wave-char text-indigo-400">o</span><span class="wave-char text-indigo-400">n</span>
+      <span class="wave-char">&nbsp;</span>
+      <span class="wave-char text-indigo-400">N</span><span class="wave-char text-indigo-400">.</span>
+    </h1>
+    <p class="text-lg sm:text-xl mb-6 font-semibold">Aspiring Developer</p>
+    <a href="#projects" class="inline-block bg-indigo-600 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-indigo-700 transition">View My Work</a>
+  </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about" class="py-16 bg-gradient-to-tr from-black via-gray-900 to-purple-800" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="text-lg text-white font-medium">As an aspiring developer transitioning from a business background, I'm currently pursuing a Master's in Software Engineering while actively learning new technologies and applying them to real-world projects.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-16 bg-gradient-to-bl from-black via-gray-900 to-blue-900" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-6">Skills</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="skill-circle">HTML + CSS</div>
+      <div class="skill-circle">SQL</div>
+      <div class="skill-circle">JavaScript</div>
+      <div class="skill-circle">Node.js</div>
+      <div class="skill-circle">Python</div>
+      <div class="skill-circle">AWS</div>
+      <div class="skill-circle">ERP/SAP</div>
+      <div class="skill-circle">Java</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-16 bg-gradient-to-b from-[#0f0f0f] to-black text-white" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+      <!-- Project 1 -->
+      <div class="bg-[#111111] p-6 rounded-lg shadow-lg">
+      <img src="assets/weather-wardrobe-thumb.jpg" alt="Weather Wardrobe" class="w-full h-48 object-cover rounded mb-4 cursor-pointer" onclick="enlargeImage(this.src)">
+        <h3 class="text-xl font-semibold mb-2">Weather Wardrobe</h3>
+        <p class="text-gray-300 mb-4">A website that recommends outfits based on weather, color preferences, and mood for the day.</p>
+        <button onclick="openModal('weatherModal')" class="text-indigo-400 hover:text-indigo-600 font-semibold">View Project</button>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-[#111111] p-6 rounded-lg shadow-lg">
+      <img src="assets/babysitter-thumb.jpg" alt="Sitter Seek" class="w-full h-48 object-cover rounded mb-4 cursor-pointer" onclick="enlargeImage(this.src)">
+        <h3 class="text-xl font-semibold mb-2">Sitter Seek</h3>
+        <p class="text-gray-300 mb-4">A matchmaking website that matches parents with babysitters.</p>
+        <button onclick="openModal('babysitterModal')" class="text-indigo-400 hover:text-indigo-600 font-semibold">View Project</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project 1 -->
+<div id="weatherModal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+  <div class="bg-[#1a1a1a] p-6 rounded-lg max-w-3xl w-full relative text-left overflow-y-auto max-h-[90vh]">
+    <button onclick="closeModal('weatherModal')" class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-white">Weather Wardrobe</h3>
+    <p class="text-gray-300 mb-4">This program helps users choose clothing based on city weather and personal preferences.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+      <img src="assets/weather-1.jpg" onclick="enlargeImage(this.src)" class="rounded cursor-pointer">
+      <img src="assets/weather-2.jpg" onclick="enlargeImage(this.src)" class="rounded cursor-pointer">
+    </div>
+    <a href="assets/weather-wardrobe-report.pdf" target="_blank" class="text-indigo-400 hover:text-indigo-600 underline">View Project Report (PDF)</a>
+  </div>
+</div>
+
+<!-- Project 2 -->
+<div id="babysitterModal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+  <div class="bg-[#1a1a1a] p-6 rounded-lg max-w-3xl w-full relative text-left overflow-y-auto max-h-[90vh]">
+    <button onclick="closeModal('babysitterModal')" class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-white">Sitter Seek</h3>
+    <p class="text-gray-300 mb-4">This platform matches parents with babysitters nearby, using a local database for backend storage.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+      <img src="assets/babysitter-1.jpg" onclick="enlargeImage(this.src)" class="rounded cursor-pointer">
+      <img src="assets/babysitter-2.jpg" onclick="enlargeImage(this.src)" class="rounded cursor-pointer">
+    </div>
+    <a href="https://github.com/waustin45/BabySitterSite_SWE5063.git" target="_blank" class="text-indigo-400 hover:text-indigo-600 underline mr-4">View Code on GitHub</a>
+    <a href="assets/Project Phase 3 - Responsive Design Report.pdf" target="_blank" class="text-indigo-400 hover:text-indigo-600 underline">View Project Report (PDF)</a>
+  </div>
+</div>
+
+<!-- Fullscreen Image Popup -->
+<div id="imagePopup" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center" onclick="closeImagePopup(event)">
+  <img id="popupImage" src="" alt="Zoomed Image" class="max-w-full max-h-[90vh] rounded-lg shadow-lg pointer-events-auto" />
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="py-16 bg-gradient-to-br from-black via-gray-900 to-purple-900" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold mb-6">Let's Connect!</h2>
+    <p class="text-lg font-medium mb-4">My Email: <a href="mailto:devnel17@gmail.com" class="text-indigo-400 hover:text-indigo-600">devnel17@gmail.com</a></p>
+    <div class="flex justify-center space-x-6">
+      <a href="http://www.linkedin.com/in/dnelson11" class="text-white hover:text-purple-400"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black border-t border-gray-800 py-6 text-center">
+  <p class="text-sm text-white">&copy; 2025 Devon Nelson. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+  AOS.init();
+
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).classList.add('flex');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('flex');
+    document.getElementById(id).classList.add('hidden');
+  }
+
+  function enlargeImage(src) {
+    const popup = document.getElementById('imagePopup');
+    const img = document.getElementById('popupImage');
+    img.src = src;
+    popup.classList.remove('hidden');
+  }
+
+  function closeImagePopup(event) {
+    if (event.target.id === 'imagePopup') {
+      document.getElementById('imagePopup').classList.add('hidden');
+    }
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.getElementById('imagePopup').classList.add('hidden');
+    }
+  });
+</script>
+
+</body>
+</html>

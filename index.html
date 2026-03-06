@@ -79,7 +79,6 @@
       <span class="wave-char">a</span><span class="wave-char">m</span><span class="wave-char">&nbsp;</span>
       <span class="wave-char text-indigo-400">D</span><span class="wave-char text-indigo-400">e</span><span class="wave-char text-indigo-400">v</span><span class="wave-char text-indigo-400">o</span><span class="wave-char text-indigo-400">n</span>
       <span class="wave-char">&nbsp;</span>
-      <span class="wave-char text-indigo-400">N</span><span class="wave-char text-indigo-400">.</span>
     </h1>
     <p class="text-lg sm:text-xl mb-6 font-semibold">Aspiring Developer</p>
     <a href="#projects" class="inline-block bg-indigo-600 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-indigo-700 transition">View My Work</a>
@@ -107,6 +106,7 @@
       <div class="skill-circle">AWS</div>
       <div class="skill-circle">ERP/SAP</div>
       <div class="skill-circle">Java</div>
+      <div class="skill-circle">Unity</div>
     </div>
   </div>
 </section>
@@ -117,20 +117,27 @@
     <h2 class="text-3xl font-semibold mb-6">Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
-      <!-- Project 1 -->
+      <!-- Project 1 Preview -->
       <div class="bg-[#111111] p-6 rounded-lg shadow-lg">
-      <img src="assets/weather-wardrobe-thumb.jpg" alt="Weather Wardrobe" class="w-full h-48 object-cover rounded mb-4 cursor-pointer" onclick="enlargeImage(this.src)">
+      <img src="assets/weather-wardrobe-thumb.jpg" alt="Weather Wardrobe" class="w-full h-48 object-contain rounded mb-4 cursor-pointer" onclick="enlargeImage(this.src)">
         <h3 class="text-xl font-semibold mb-2">Weather Wardrobe</h3>
         <p class="text-gray-300 mb-4">A website that recommends outfits based on weather, color preferences, and mood for the day.</p>
         <button onclick="openModal('weatherModal')" class="text-indigo-400 hover:text-indigo-600 font-semibold">View Project</button>
       </div>
 
-      <!-- Project 2 -->
+      <!-- Project 2 Preview -->
       <div class="bg-[#111111] p-6 rounded-lg shadow-lg">
-      <img src="assets/babysitter-thumb.jpg" alt="Sitter Seek" class="w-full h-48 object-cover rounded mb-4 cursor-pointer" onclick="enlargeImage(this.src)">
+      <img src="assets/babysitter-thumb.jpg" alt="Sitter Seek" class="w-full h-48 object-contain rounded mb-4 cursor-pointer" onclick="enlargeImage(this.src)">
         <h3 class="text-xl font-semibold mb-2">Sitter Seek</h3>
         <p class="text-gray-300 mb-4">A matchmaking website that matches parents with babysitters.</p>
         <button onclick="openModal('babysitterModal')" class="text-indigo-400 hover:text-indigo-600 font-semibold">View Project</button>
+      </div>
+      <!-- Project 3 Preview -->
+      <div class="bg-[#111111] p-6 rounded-lg shadow-lg">
+      <img src="assets/Turbo Tennis Pic.jpg" alt="Turbo Tennis" class="w-full h-48 object-contain rounded mb-4 cursor-pointer" onclick="enlargeImage(this.src)">
+      <h3 class="text-xl font-semibold mb-2">Turbo Tennis</h3>
+      <p class="text-gray-300 mb-4">Turbo Tennis is a 2D tennis game built in Unity where a player competes in a stylized tennis match inside a dome-like arena.</p>
+      <button onclick="openModal('turboTennisModal')" class="text-indigo-400 hover:text-indigo-600 font-semibold">View Project</button>
       </div>
     </div>
   </div>
@@ -165,6 +172,22 @@
   </div>
 </div>
 
+<!-- Project 3 -->
+<div id="turboTennisModal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+  <div class="bg-[#1a1a1a] p-6 rounded-lg max-w-3xl w-full relative text-left overflow-y-auto max-h-[90vh]">
+    <button onclick="closeModal('turboTennisModal')" class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl">&times;</button>
+    
+    <h3 class="text-2xl font-bold mb-4 text-white">Turbo Tennis</h3>
+    <p class="text-gray-300 mb-4">Turbo Tennis is a 2D tennis game built in Unity where a player competes in a stylized tennis match inside a dome-like arena.</p>
+    
+    <div class="flex flex-col gap-2">
+      <a href="assets/Final Team Report Group 2.pdf" target="_blank" class="text-indigo-400 hover:text-indigo-600 underline">View Team Report (PDF)</a>
+      <a href="assets/Turbo Tennis Final Comparison Demo.mp4" target="_blank" class="text-indigo-400 hover:text-indigo-600 underline">View Demo Video</a>
+    </div>
+  </div>
+</div>
+
+
 <!-- Fullscreen Image Popup -->
 <div id="imagePopup" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center" onclick="closeImagePopup(event)">
   <img id="popupImage" src="" alt="Zoomed Image" class="max-w-full max-h-[90vh] rounded-lg shadow-lg pointer-events-auto" />
@@ -183,7 +206,7 @@
 
 <!-- FOOTER -->
 <footer class="bg-black border-t border-gray-800 py-6 text-center">
-  <p class="text-sm text-white">&copy; 2025 Devon Nelson. All rights reserved.</p>
+  <p class="text-sm text-white">&copy; 2026 Devon Nelson. All rights reserved.</p>
 </footer>
 
 <!-- Scripts -->
